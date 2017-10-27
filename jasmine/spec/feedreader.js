@@ -73,11 +73,11 @@ $(function() {
           */
           it('menu does appear and disappear', function() {
               var menuIcon = $('.menu-icon-link');
-              var appearence = false;
-              menuIcon.on('click', function() {
-                appearence = $('body').hasClass('menu-hidden');
-              });
-              expect(appearence).toBe(false);
+              
+              menuIcon.click();
+              expect($('body').hasClass('menu-hidden')).toBe(false);
+              menuIcon.click();
+              expect($('body').hasClass('menu-hidden')).toBe(true);
           });
 
     });
@@ -94,17 +94,25 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
         beforeEach(function(done) {
-
-        })
+            
+            done();
+        });
 
     });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
+    describe('New Feed Selection', function() {
+
+    
 
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+        beforeEach(function(done) {
 
-    
+        });
+
+    });
+
 }());
