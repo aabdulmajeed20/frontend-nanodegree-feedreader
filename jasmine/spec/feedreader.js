@@ -64,7 +64,7 @@ $(function() {
         var hidden = $('body').hasClass('menu-hidden');
         it('default is hidden', function() {
             expect(hidden).toBe(true);
-        })
+        });
 
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
@@ -108,7 +108,7 @@ $(function() {
     describe('New Feed Selection', function() {
 
     
-        var currentFeed
+        var currentFeed;
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
